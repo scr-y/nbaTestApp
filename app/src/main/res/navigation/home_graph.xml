@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_home"
+    app:startDestination="@id/playersListFragment">
+
+    <fragment
+        android:id="@+id/playersListFragment"
+        android:name="com.example.testapp.presentation.ui.fragments.playersList.PlayersListFragment"
+        android:label="PlayersListFragment" >
+        <action
+            android:id="@+id/action_playersListFragment_to_playerInfoFragment"
+            app:destination="@id/playerInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerInfoFragment"
+        android:name="com.example.testapp.presentation.ui.fragments.playerPage.PlayerInfoFragment"
+        android:label="PlayerInfoFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"/>
+    </fragment>
+</navigation>

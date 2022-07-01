@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_favorites"
+    app:startDestination="@id/favoritesPlayersFragment">
+
+    <fragment
+        android:id="@+id/favoritesPlayersFragment"
+        android:name="com.example.testapp.presentation.ui.fragments.favorites.FavoritesPlayersFragment"
+        android:label="fragment_favorites_players"
+        tools:layout="@layout/fragment_favorites_players" >
+        <action
+            android:id="@+id/action_favoritesPlayersFragment_to_playerInfoFragment"
+            app:destination="@id/playerInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerInfoFragment"
+        android:name="com.example.testapp.presentation.ui.fragments.playerPage.PlayerInfoFragment"
+        android:label="PlayerInfoFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"/>
+    </fragment>
+</navigation>

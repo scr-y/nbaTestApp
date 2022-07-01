@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Test App</string>
+    <string name="home">Главная</string>
+    <string name="search">Поиск</string>
+    <string name="favorites">Избранные</string>
+    <string name="connection_error">Что-то пошло не так. Попробуйте снова</string>
+</resources>
