@@ -42,19 +42,23 @@ class FavoritesPlayersFragment : Fragment() {
                     )
                 }
             })
-//        if (playersList.size == 0)
-            getPlayersList()
+        getPlayersList()
         return binding.root
     }
 
     private fun getPlayersList() {
-        playersList.clear()
-
         viewModel.allWords.observe(viewLifecycleOwner) { players ->
             // Update the cached copy of the words in the adapter.
-            players.let { playersList.addAll(it) }
-            binding.adapter?.notifyDataSetChanged()
+            players.let {
+                if (playersList != it) {
+                    playersList.clear()
+                    playersList.addAll(it)
+                    binding.adapter?.notifyDataSetChanged()
+
+                }
+            }
         }
+
     }
 
 }
